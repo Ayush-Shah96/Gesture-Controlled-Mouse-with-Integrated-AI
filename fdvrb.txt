@@ -1,0 +1,23 @@
+
+            else:
+                print("Unauthorized person detected.")
+                if app.ChatBot.started:
+                    app.ChatBot.close()
+                    sys.exit()
+
+            if Gesture_Controller.gc_mode:
+                Gesture_Controller.gc_mode = 0
+
+    if cv2.waitKey(1) & 0xFF == ord("q"):
+        break 
+
+    cv2.imshow('Webcam', img)
+    cv2.waitKey(1)
+        if Gesture_Controller.GestureController.gc_mode:
+            Gesture_Controller.GestureController.gc_mode = 0
+
+    if cv2.waitKey(1) & 0xFF == ord("q"):
+        break 
+
+    cv2.imshow('Webcam', img)
+    cv2.waitKey(1)
